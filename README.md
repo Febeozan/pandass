@@ -82,4 +82,59 @@ PS C:\Users\Pc9\Documents\Programas> & C:/Users/Pc9/AppData/Local/Programs/Pytho
 PS C:\Users\Pc9\Documents\Programas>
 ~~~~
 __5 - Seleccionar una columna con [] (forma preferida de seleccionar una columna)__
+~~~~
+import pandas as pd
 
+df = pd.read_csv('historico-nombres.csv')
+
+columna = df[['nombre' ,'cantidad', 'anio']]
+print(columna)
+~~~~
+resultado:
+~~~~
+PS C:\sexto> & C:/Users/Pc9/AppData/Local/Programs/Python/Python312/python.exe c:/sexto/lo.py
+                          nombre  cantidad  anio
+0                          Maria       314  1922
+1                           Rosa       203  1922
+2                           Jose       163  1922
+3                    Maria Luisa       127  1922
+4                         Carmen       117  1922
+...                          ...       ...   ...
+9761604         Antonella Paloma         1  2015
+9761605  Briana Princesa Abigail         1  2015
+9761606            Neylan Dilara         1  2015
+9761607              Laya Jazmín         1  2015
+9761608      Fiorella Luz Mailén         1  2015
+
+[9761609 rows x 3 columns]
+PS C:\sexto>
+~~~~
+__6 - Seleccionar 2 columnas usando [[]]__
+~~~~
+import pandas as pd
+
+df = pd.read_csv('historico-nombres.csv')
+
+dos_columnas = df[['nombre' ,'cantidad']]
+print(dos_columnas)
+
+~~~~
+resultado:
+~~~~
+PS C:\sexto> & C:/Users/Pc9/AppData/Local/Programs/Python/Python312/python.exe c:/sexto/lo.py
+                          nombre  cantidad
+0                          Maria       314
+1                           Rosa       203
+2                           Jose       163
+3                    Maria Luisa       127
+4                         Carmen       117
+...                          ...       ...
+9761604         Antonella Paloma         1
+9761605  Briana Princesa Abigail         1
+9761606            Neylan Dilara         1
+9761607              Laya Jazmín         1
+9761608      Fiorella Luz Mailén         1
+
+[9761609 rows x 2 columns]
+PS C:\sexto> 
+~~~~
